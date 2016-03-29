@@ -13,19 +13,22 @@
 
 class Book
 
-  def initizlize(title, chapter)
+  attr_accessor :title, :chapters
+  def initialize
     @title = title;
-    @chapter = []
+    @chapters = []
   end
 
-  def addchapter(chapter)
-    @chapter << chapter
+  def add_chapter(chapter)
+    @chapters << chapter
   end
 
   def chapters
-
+    puts "Your book: #{@title} has #{@chapters.length} chapters:"
+    @chapters.each do |x|
+      puts "#{@chapters.index(x) + 1} #{x}"
+    end
   end
-
 end
 
 book = Book.new
