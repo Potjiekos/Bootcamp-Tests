@@ -12,7 +12,7 @@ var isPrime = function(n){
 
 console.log(isPrime(2))
 console.log(isPrime(4))
-console.log(isPrime(5))
+console.log(isPrime(8))
 console.log(isPrime(13))
 console.log(isPrime(17))
 console.log(isPrime(19))
