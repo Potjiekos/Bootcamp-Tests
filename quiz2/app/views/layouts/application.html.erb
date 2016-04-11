@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz2</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <style media="screen">
+
+    html {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .navigation_bar {
+      margin-top: 10px;
+    }
+
+    .paginate {
+      float: right;
+      margin-right: 190px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<div class="navigation_bar">
+  <%= link_to("Submit Request", new_request_path) %> |
+  <%= link_to("All Requests", requests_path) %>
+</div>
+
+<hr>
+
+<%= yield %>
+
+</body>
+</html>

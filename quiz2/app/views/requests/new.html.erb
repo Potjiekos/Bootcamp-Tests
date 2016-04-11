@@ -1,0 +1,43 @@
+<div class="header">
+  <h3>Submit Request</h3>
+</div>
+<hr>
+
+<%= form_for @request, :html => {:id => "request_form"} do |f| %>
+
+  <div class="form-group">
+    <%= f.label :name  %>  <%# f.label :title, class: "abc" to style %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+<br>
+
+  <div>
+    <%= f.label :department %>
+    <div class="radio_buttons">
+      <%= f.radio_button :sales, "sales", :checked => false %>
+      <%= f.label :sales %> |
+      <%= f.radio_button :marketing, "marketing", :checked => false %>
+      <%= f.label :marketing %> |
+      <%= f.radio_button :technical, "technical", :checked => false %>
+      <%= f.label :technical %>
+    </div>
+  </div>
+
+<br>
+
+  <div>
+    <%= f.label :message %>
+    <%= f.text_area :message %>
+  </div>
+
+<br>
+
+  <%= f.submit %>
+
+<% end %>
