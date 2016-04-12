@@ -20,11 +20,11 @@ class RequestsController < ApplicationController
   end
 
   def index
-    if params[:search]
-      @request = Request.page(params[:page]).per(7)
-      @request = Request.search(params[:search]).order("created_at DESC")
+    @request = Request.search(params[:search])
+    if @request.class == Array
+      @request = Kaminari.paginate_array(@request).page(params[:page]).per(7)
     else
-      @request = Request.page(params[:page]).per(7)
+      @request = @request.page(params[:page]).per(7)
     end
   end
 
