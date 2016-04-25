@@ -6,11 +6,16 @@ class LikesController < ApplicationController
     like = current_user.likes.new
     idea = Idea.find params[:idea_id]
     like.idea = idea
-    if like.save
-      redirect_to ideas_path, notice: "Idea Liked!"
+    if current_user == idea.user
+      redirect_to ideas_path, alert: "You cannot like your own idea"
     else
-      redirect_to ideas_path, alert: "Cannot Like"
+      if like.save
+        redirect_to ideas_path, notice: "Idea Liked!"
+      else
+        redirect_to ideas_path, alert: "Cannot Like"
+      end
     end
+
   end
 
   def destroy

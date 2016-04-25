@@ -4,7 +4,7 @@ class JoinsController < ApplicationController
     idea = Idea.find params[:idea_id]
     join = Join.new(idea: idea, user: current_user)
     if current_user == idea.user
-      render :show, alert: "You cannot join an idea you have created"
+      redirect_to ideas_path, alert: "You cannot join an idea you have created"
     else
       if join.save
         redirect_to ideas_path, notice: "Joined!"

@@ -2,11 +2,11 @@ Build a web application with Ruby on Rails that enable users to share ideas and 
 
 Here is the requirements and respective score:
 
-Implement CRUD for ideas with user authentication integrated. The user must be signed in do anything but viewing list of ideas and a single idea details. The idea must be associated with the currently logged in user and show their name with the ideas listing. (30%)
+Implement CRUD for ideas with user authentication integrated. The user must be signed in do anything but viewing list of ideas and a single idea details. The idea must be associated with the currently logged in user and show their name with the ideas listing. (30%) DONE
 
-Implement the ability to Like an idea as shown below. Users can't like their own ideas. Show the number of likes on the idea show page and the listing page. (30%)
+Implement the ability to Like an idea as shown below. Users can't like their own ideas. Show the number of likes on the idea show page and the listing page. (30%) DONE
 
-Implement the ability to join an idea (become a member of the idea). The show page of an idea should list the names of all the member of the idea. Users can't join their own ideas. The listings page should show the number of members of that idea. (20%)
+Implement the ability to join an idea (become a member of the idea). The show page of an idea should list the names of all the member of the idea. Users can't join their own ideas. The listings page should show the number of members of that idea. (20%) DONE
 
 Add the ability to create and delete comments on an idea (on the idea show page) with RSpec tests (20%). The tests should take into account the following:
   -Users must be logged in to create or delete comments

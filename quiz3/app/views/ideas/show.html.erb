@@ -2,8 +2,7 @@
 
 <span>
 | Created By: <%= @idea.user_full_name.titleize %>
-| <%# @idea.like.count %>
-| <%=  %>
+| Likes: ( <%= @idea.likes.count %> )
 </span><hr>
 
 <p><%= @idea.body %></p>
