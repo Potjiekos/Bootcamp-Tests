@@ -1,0 +1,21 @@
+<h4><span class="page_header">All Ideas</span></h4>
+<span><%= notice || alert %></span>
+<hr>
+
+
+<% @ideas.each do |idea| %>
+  <div>
+    | <%= link_to idea.title, idea_path(idea) %> | Created by <%= idea.user_full_name %>
+    | Likes: ( <%= idea.likes.count %> )
+    | <%= link_to "Join" %> |
+
+    <% like = idea.like_for(current_user) %>
+    <% if like %>
+      <%= link_to "Unlike", idea_like_path(idea, like), method: :delete  %>
+    <% else %>
+      <%= link_to "Like", idea_likes_path(idea), method: :post %>
+    <% end %>
+
+    <hr>
+  </div>
+<% end %>

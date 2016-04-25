@@ -1,0 +1,15 @@
+<h4><span class="page_header">Sign In</span></h4><hr>
+
+<%= form_tag sessions_path do %>
+  <div>
+    <%= label_tag :email %>
+    <%= email_field_tag :email %>
+  </div><br>
+
+  <div>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div><br>
+  
+  <%= submit_tag "Sign In" %>
+<% end %>
