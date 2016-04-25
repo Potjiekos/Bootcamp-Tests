@@ -20,4 +20,8 @@ class JoinsController < ApplicationController
     redirect_to ideas_path, notice: "No longer part of idea group!"
   end
 
+  def index
+    @join = current_user.joined_ideas
+  end
+
 end

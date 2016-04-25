@@ -1,0 +1,9 @@
+<h4><span class="page_header">Joined Ideas</span></h4>
+
+<% @join.each do |join| %>
+<div>
+  <%= link_to join.title, idea_path(join) %>
+<hr>
+</div>
+
+  <% end %>

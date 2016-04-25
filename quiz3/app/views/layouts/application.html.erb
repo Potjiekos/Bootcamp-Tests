@@ -14,7 +14,7 @@
     <%= link_to "All Ideas", ideas_path %> |
 
     <% if user_signed_in? %>
-      <%= link_to "Joined Ideas" %> |
+      <%= link_to "Joined Ideas", joins_path %> |
   <span class="hellotext">Hello <%= current_user.first_name %>! :) </span> |
       <%= link_to "Log out", sessions_path, method: :delete %> |
     <% else %>

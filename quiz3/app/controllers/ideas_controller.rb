@@ -24,8 +24,8 @@ class IdeasController < ApplicationController
 
   def index
     @ideas = Idea.all
+    @like = @idea.like_for(current_user) if @like
   end
-
 
   private
 

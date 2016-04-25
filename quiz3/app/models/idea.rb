@@ -26,4 +26,9 @@ class Idea < ActiveRecord::Base
     likes.find_by_user_id(user)
   end
 
+  def join_for(user)
+    joins.find_by_user_id(user)
+  end
+
+
 end
